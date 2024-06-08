@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyrannosaurus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Tyrannosaurus</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="Tyrannosaurus_1.png" alt="Tyrannosaurus 1 Icon" >
+        <img src="Tyrannosaurus_2.png" alt="Tyrannosaurus 2 Icon" >
+        <img src="Tyrannosaurus_3.png" alt="Tyrannosaurus 3 Icon" >
+        <img src="Tyrannosaurus_4.png" alt="Tyrannosaurus 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Tyrannosaurus este unul dintre cei mai reprezentativi dinozauri care a dominat zona de Nord-Vest a Americii în urmatoarele perioade: Campanianul târziu și Maastrichtianul timpuriu al Cretacicului. Era un carnivor dominant, numit de Henry Fairdield Osbor, acesta avea dimensiuni între 12 și 13 metri lungime. Sunt cunoscute peste 30 de exemplare, unele formând schelete aproape complete.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">Tyrannosaurus is one of the most iconic dinosaurs that dominated the northwestern region of America during the Late Campanian and Early Maastrichtian stages of the Cretaceous. It was a dominant carnivore, named by Henry Fairfield Osborn, and measured between 12 and 13 meters in length. Over 30 specimens are known, some forming nearly complete skeletons.</p><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Tyrannosaurus_ro.m4a');
+        const englezaAudio = new Audio('Tyrannosaurus_en.wav');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
+
+//by Alexa Stefan George
